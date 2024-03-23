@@ -1,0 +1,7 @@
+Done
+1. Basic Front-end Built.
+2. Initial project sctucture developed. : 20th march 2024
+3. Output plot code implemented in jupyter notebook. : 21st march 2024
+
+Goals:
+1. Take the stock data as input from the user, form clusters on the extremum values and as output display the line graph using complete stock data and plot the extremum datapoints as y = extremum values over the first plot.

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clustering Visualization</title>
+</head>
+<body>
+
+<h2>Extremum Value Clustering Visualization</h2>
+
+<div class="main_container">
+  <div class="container1">
+    <form action="{{url_for('form_clusters')}}" method="post">
+      <label for="ticker">Ticker:</label><br>
+      <input type="text" id="ticker" name="tickers" required><br><br>
+      
+      <label for="start-date">Start Date:</label><br>
+      <input type="date" id="start-date" name="start_date" required><br><br>
+      
+      <label for="end-date">End Date:</label><br>
+      <input type="date" id="end-date" name="end_date" required><br><br>
+      
+      <label for="interval">Interval:</label><br>
+      <input type="text" id="interval" name="interval" required><br><br>
+      
+      <label for="group-by">Group By:</label><br>
+      <input type="text" id="group-by" name="group_by" required><br><br>
+      
+      <input type="checkbox" id="auto-adjust" name="auto_adjust">
+      <label for="auto-adjust">Auto Adjust</label><br><br>
+      
+      <input type="checkbox" id="pre-post" name="pre_post">
+      <label for="pre-post">Pre Post</label><br><br>
+      
+      <input type="checkbox" id="threads" name="threads">
+      <label for="threads">Threads</label><br><br>
+      
+      <label for="proxy">Proxy:</label><br>
+      <input type="text" id="proxy" name="proxy"><br><br>
+
+      <label for="num_clusters">No. of Clusters:</label><br>
+      <input type="number" id="num_clusters" name="num_clusters"><br><br>
+    
+      <label for="clustering">Clustering Algorithm</label><br>
+      <select id="clustering-algorithm" name="clustering_algorithm">
+        <option value="KMeans">KMeans</option>
+        <option value="Hierarchical">Hierarchical</option>
+        <option value="DBSCAN">DBSCAN</option>
+      <br>
+      
+      <input type="submit" value="Form Cluster">
+    </form>
+  </div>
+  <div class="container2">    
+    <h1>Scatter Plot</h1>
+
+    <img src={{results}} alt="Scatter Plot">
+  </div>
+</div>
+</body>
+</html>
+
+
